@@ -1,0 +1,28 @@
+{{>hero}}
+<div class="container" id="Top-meals">
+  <br /><br /><br />
+  <h1>Top Meals of the Day!</h1><br />
+  <h5 style="color: green;">Hover On Images For More Details</h5>
+  <br />
+
+ <div class="row cols-3">
+  {{#each c_meal}}
+      <div class="col">
+        <div class="grid2-item"><img
+            src={{this.Image_url}}
+            alt="Top Meal 1"
+          /></div>
+        <h3 style="color:greenyellow;">{{this.Title}}</h3>
+        <br>
+        <table class="nn" style="color: white;">
+          <tr><th>Price</th><td> &nbsp;&nbsp;&nbsp; </td><td> {{this.Price}}</td></tr>
+          <tr><th>CookTime</th><td> &nbsp;&nbsp;&nbsp; </td><td> {{this.CookTime}}</td></tr>
+          <tr><th>Servings</th><td> &nbsp;&nbsp;&nbsp; </td><td> {{this.Servings}}</td></tr>
+          <tr><th>Calorie</th><td> &nbsp;&nbsp;&nbsp; </td><td> {{this.Calory}}</td></tr>
+        </table>
+      </div>
+  {{/each}}
+   
+</div>
+<br><br><br>
+<br><br>

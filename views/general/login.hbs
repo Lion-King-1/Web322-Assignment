@@ -1,0 +1,50 @@
+
+<div class="container" style="font-size: x-large;">
+  <form method="post" action="/login">
+    <fieldset>
+      <legend>
+        <br /><br />
+        <h1 style="text-align: center;color: yellow;">Welcome Back</h1>
+        <br /><br /><hr />
+      </legend>
+      <div class="mb-3">
+        Email address <br>
+        <input
+          type="text"
+          name="UserName"
+          id="UserName"
+          value="{{set.UserName}}"
+        /><br />
+        {{#if val.UserName}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{val.UserName}}</span><br />
+        {{/if}}
+      </div>
+      <div class="mb-3">
+        Password <br>
+        <input
+          type="text"
+          name="Pass"
+          id="Pass"
+          value="{{set.Pass}}"
+        /><br />
+        {{#if val.Pass}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{val.Pass}}</span><br />
+        {{/if}}
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="btn btn-dark"
+          style="background-color: orangered;border-radius: 30px;"
+        >Log in
+        </button>
+      </div>
+    </fieldset>
+  </form>
+  <br /><br />
+  <div style="color:yellowgreen;">
+    <p>Don't have an account? <a href="/Sign-up" style="text-decoration: none;">Sign up</a>.</p>
+  </div>
+  <br /><br /><hr />
+</div>

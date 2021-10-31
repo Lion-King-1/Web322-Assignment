@@ -1,0 +1,239 @@
+/************************************************************************************
+* WEB322 – Project (Fall 2021)
+* I declare that this assignment is my own work in accordance with Seneca Academic
+* Policy. No part of this assignment has been copied manually or electronically from
+* any other source (including web sites) or distributed to other students.
+*
+* Name:                 Taranjeet Singh
+* Student ID:           145258208
+* Course/Section:       ZAA
+*
+************************************************************************************/
+
+* {
+  padding: 0%;
+  margin: 0;
+  font-style: oblique;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("/bc.jpg");
+  background-attachment: fixed;
+  color: orange;
+  
+}
+
+#T_logo:hover {
+  width: 200px;
+}
+
+.menu {
+  text-align: center;
+  margin-left: 30px;
+}
+
+.menu ul {
+  display: inline-flex;
+  list-style: none;
+  font-size: large;
+  color: white;
+}
+
+.menu ul li {
+    width: 160px;
+    margin: 15px;
+    padding: 5px;
+}
+
+
+.point,
+.menu ul li a{
+    background-color: #ffffff00;
+    color: white;
+    text-decoration: none;
+}
+
+.point,
+.menu ul li a:hover {
+    color: yellow;
+    font-weight:bold;
+}
+
+
+.view {
+  text-align: center;
+  color: mediumblue;
+  font-size: xx-large;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.sub-menu {
+  display: none;
+  border-radius: 30px;
+}
+
+.menu ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  background-image: url("/7.jpg");
+  margin-top: 15px;
+}
+
+.menu ul li:hover .sub-menu ul {
+  display: block;
+  background: transparent;
+  border-radius: 0%;
+  text-align: left;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-gap: 20px;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/8.jpg");
+  border-radius: 20px;
+  margin: 10%;
+  margin-left: 20%;
+}
+
+.grid-items1 {
+  grid-column: span 2;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.grid-items img {
+  border-radius: 20px;
+}
+
+.grid-items img:hover {
+  border-radius: 50%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/8.jpgs");
+  border-radius: 20px;
+  margin: 10%;
+  margin-left: 20%;
+}
+
+.grid2-item1 {
+  grid-column: span 3;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.grid2-item img {
+  border-radius: 50%;
+}
+
+.grid2-item img:hover {
+  border-radius: 20px;
+  width: 200px;
+}
+
+.full_menu {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: url("/8.jpg");
+  border-radius: 20px;
+  text-align: center;
+  margin: 10%;
+  margin-left: 20%;
+  transition: width 2s;
+}
+
+.full_menu img
+{
+    width: 200px;
+    border-radius: 20px;
+}
+
+.full_menu img:hover
+{
+    border-radius: 20px;
+    width: auto;
+}
+
+.grid3
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    grid-column-gap: 90px;
+    justify-content: center;
+    color: white;
+}
+
+.grid3-item1
+{
+    grid-column: span 4;
+}
+
+.grid3 ul
+{
+    list-style: none;
+}
+
+.grid3-item ul li a
+{
+    text-decoration: none;
+    color:orange;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grid3-item ul li a:hover
+{
+    color: yellowgreen;
+    font-weight:900;
+}
+
+.Info
+{
+  color:darkred;
+  text-align: left;
+  border-spacing: 20px;
+  margin-left: 30%;
+  display: none;
+}
+
+.grid-items:hover .Info
+{
+  display:block;
+}
+
+.container
+{
+  /* background-image: url('/8.jpg');   */
+  text-align: center;
+  border-radius: 30px;
+}
+
+.container1
+{
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.nn
+{
+  display: none;
+}
+.col:hover .nn{
+  display: block;
+}
+
+.biggi:hover
+{
+  width: 500px;
+}

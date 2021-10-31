@@ -1,0 +1,72 @@
+<div class="container" style="font-size: x-large;">
+  <form method="post" action="/Sign-up">
+    <fieldset>
+      <legend>
+        <br /><br />
+        <h1 style="text-align: center;color: yellow;">Register</h1>
+        <br /><br /><hr />
+      </legend>
+      <div class="mb-3">
+        <label for="firstName">First Name*</label>&nbsp;
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          value="{{value.firstName}}"
+        /><br />
+        {{#if valid.firstName}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.firstName}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName">Last Name*</label>&nbsp;
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          value="{{value.lastName}}"
+        /><br />
+        {{#if valid.lastName}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.lastName}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="email">Email*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="email" id="email" value="{{value.email}}" /><br
+        />
+        {{#if valid.email}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.email}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="Password">Password*</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="Password"
+          id="Password"
+          value="{{value.Password}}"
+        /><br />
+        {{#if valid.Password}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Password}}</span><br />
+        {{/if}}
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="btn btn-dark"
+          style="background-color: orangered;border-radius: 30px;"
+        >Submit
+        </button>
+      </div>
+    </fieldset>
+  </form>
+  <br /><br />
+  <div style="color:yellowgreen;">
+    <p>Already have an account? <a href="/login" style="text-decoration: none;">Sign in</a>.</p>
+  </div>
+  <br /><br /><hr />
+</div>

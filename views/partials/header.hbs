@@ -1,0 +1,126 @@
+{{! <header>
+      <nav>
+        <div class="menu" id="home">
+          <ul>
+            <img
+              src="/logo.PNG"
+              alt="logo"
+              width="100px"
+              style="
+                margin-top: 10px;
+                border-radius: 20px;
+                align-items: baseline;
+              "
+              id="T_logo"
+            />
+           <li class="point">
+              <img src="/1.png" alt="Home" /><a href="/"><b>Home</b></a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="#Cuisines">Indian Cuisines</a></li>
+                  <li><a href="#menu">Pricing</a></li>
+                  <li><a href="#menu">Order Menu</a></li>
+                  <li><a href="#Top-meals">Top Dishes</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <img src="/4.png" alt="Services" /><a href="/on-the-menu"
+                ><b>On-The-Menu</b></a
+              >
+            </li>
+            <li>
+              <img src="/2.png" alt="Contact" /><a href="#contact"
+                ><b>Contact US</b></a
+              >
+            </li>
+            <li>
+              <img src="/3.png" alt="Sign in" /><a href="/login"
+                ><b>Sign in</b></a
+              >
+            </li>
+            <li>
+              <img src="/5.png" alt="Create" /><a href="/Sign-up"
+                ><b>Sign up</b></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header> }}
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <img
+    src="/logo.PNG"
+    alt="logo"
+    width="100px"
+    style="
+                margin-top: 10px;
+                border-radius: 20px;
+                align-items: baseline;
+              "
+    id="T_logo"
+  />
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px;"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="/on-the-menu"
+          >On-The-Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Sign-up">Sign-up</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="/Welcome">Welcome</a></li>
+            <li><a class="dropdown-item" href="#Cuisines">Cuisines</a></li>
+            <li><a class="dropdown-item" href="#Top-meals">Top-meals</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#ring">contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
