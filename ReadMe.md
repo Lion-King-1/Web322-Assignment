@@ -7,5 +7,5 @@ Name:           Taranjeet Singh
 Student ID:     145258208
 Course/Section: ZAA
 ## Project URLs
-GitHub Repository: https://github.com/<repo_name>/
+GitHub Repository: https://github.com/Lion-King-1/Web322-Assignment.git
 Heroku URL: https://<app_name>.herokuapp.com/
