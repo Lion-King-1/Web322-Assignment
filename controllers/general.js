@@ -23,6 +23,10 @@ router.get("/Sign-up", function (req, res) {
   res.render("general/Register");
 });
 
+router.get("/Success", function (req, res) {
+  res.render("general/Success");
+});
+
 router.post("/Sign-up", function (req, res) {
   console.log(req.body);
 
@@ -50,21 +54,21 @@ router.post("/Sign-up", function (req, res) {
     Password.trim().length === 0 ||
     Password.trim().length < 6 ||
     Password.trim().length > 12
-  ) {
-    go = false;
-    reason.Password = "Password must be between 6-12 characters";
-  } else if (
+    ) {
+      go = false;
+      reason.Password = "Password must be between 6-12 characters";
+    } else if (
     !(
       /\W+/g.test(Password) &&
       /[a-zA-Z]+/g.test(Password) &&
       /\d+/.test(Password)
-    )
-  ) {
+      )
+      ) {
     go = false;
     reason.Password =
       "Password must contain one Symbol, Lowercase letter, Uppercase letter and Number";
-  }
-
+    }
+    
   if (go) {
     const sgMail=require("@sendgrid/mail");
     sgMail.setApiKey(process.env.Send_API_KEY);
@@ -80,7 +84,7 @@ router.post("/Sign-up", function (req, res) {
     }
     sgMail.send(msg)
     .then(()=>{
-      res.send("Sucess, Validation passed, email sent.");
+        res.render("general/Success");
     })
     .catch(err=>{
       console.log(`Error ${err}`);
@@ -122,7 +126,9 @@ router.post("/login", function (req, res) {
   }
 
   if (good) {
-    res.render("general/Welcome");
+    res.render("general/Welcome",{
+      set:req.body
+    });
   } else {
     res.render("general/login", {
       set: req.body,
@@ -130,5 +136,6 @@ router.post("/login", function (req, res) {
     });
   }
 });
+
 
 module.exports = router;

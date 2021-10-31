@@ -9,4 +9,4 @@ Student ID:     145258208
 Course/Section: Web322 ZAA
 ## Project URLs
 GitHub Repository: https://github.com/Lion-King-1/Web322-Assignment.git
-Heroku URL: https://<app_name>.herokuapp.com/
+Heroku URL: https://web322-my-assignment.herokuapp.com/

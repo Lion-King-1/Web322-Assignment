@@ -25,7 +25,9 @@ body {
 }
 
 #T_logo:hover {
-  width: 200px;
+  background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .menu {
@@ -237,3 +239,11 @@ body {
 {
   width: 500px;
 }
+
+.card:hover
+{
+  background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+  padding: 5px;
+  border-radius: 20px;
+}
+
