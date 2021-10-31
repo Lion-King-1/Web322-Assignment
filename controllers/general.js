@@ -74,7 +74,7 @@ router.post("/Sign-up", function (req, res) {
       from:'tsingh219@myseneca.ca',
       Subject:'Contact Us Form Submission',
       html:`<h1 style="text-align: center;">Welcome to TS-Flavours</h1><br>
-            <p>My name is Taranjeet Singh an I welcome you to <b>Food Hunters</b> Community</p><br>
+            <p>My name is Taranjeet Singh and I welcome you to <b>Food Hunters</b> Community</p><br>
             Visitor's Full Name: ${firstName} ${lastName}<br>
             Visitor's Email Address: ${email}<br>`
     }
