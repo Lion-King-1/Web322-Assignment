@@ -23,10 +23,6 @@ router.get("/Sign-up", function (req, res) {
   res.render("general/Register");
 });
 
-router.get("/Success", function (req, res) {
-  res.render("general/Success");
-});
-
 router.post("/Sign-up", function (req, res) {
   console.log(req.body);
 
@@ -84,7 +80,9 @@ router.post("/Sign-up", function (req, res) {
     }
     sgMail.send(msg)
     .then(()=>{
-        res.render("general/Success");
+      res.render("general/Welcome",{
+        set:req.body
+      });
     })
     .catch(err=>{
       console.log(`Error ${err}`);
@@ -126,9 +124,7 @@ router.post("/login", function (req, res) {
   }
 
   if (good) {
-    res.render("general/Welcome",{
-      set:req.body
-    });
+    res.send("Success Login")
   } else {
     res.render("general/login", {
       set: req.body,
