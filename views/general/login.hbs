@@ -1,5 +1,5 @@
-
 <div class="container" style="font-size: x-large;">
+
   <form method="post" action="/login">
     <fieldset>
       <legend>
@@ -7,29 +7,65 @@
         <h1 style="text-align: center;color: yellow;">Welcome Back</h1>
         <br /><br /><hr />
       </legend>
+
+      {{#each error}}
+        <span
+          style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;"
+        >{{this}}</span><br />
+      {{/each}}
+
       <div class="mb-3">
-        Email address <br>
+        Email address
+        <br />
         <input
           type="text"
-          name="UserName"
-          id="UserName"
-          value="{{set.UserName}}"
+          name="email"
+          id="email"
+          value="{{set.email}}"
         /><br />
-        {{#if val.UserName}}
-          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{val.UserName}}</span><br />
+        {{#if val.email}}
+          <span
+            style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;"
+          >{{val.email}}</span><br />
         {{/if}}
       </div>
       <div class="mb-3">
-        Password <br>
-        <input
-          type="text"
-          name="Pass"
-          id="Pass"
-          value="{{set.Pass}}"
-        /><br />
-        {{#if val.Pass}}
-          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{val.Pass}}</span><br />
+        Password
+        <br />
+        <input type="password" name="Password" id="Password" value="{{set.Password}}" /><br
+        />
+        {{#if val.Password}}
+          <span
+            style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;"
+          >{{val.Password}}</span><br />
         {{/if}}
+      </div>
+      
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="Operator"
+          id="flexRadioDefault1"
+          value="Cleark"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          Cleark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="Operator"
+          id="flexRadioDefault2"
+          value="Customer"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Customer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        </label>
       </div>
 
       <div>
@@ -44,7 +80,8 @@
   </form>
   <br /><br />
   <div style="color:yellowgreen;">
-    <p>Don't have an account? <a href="/Sign-up" style="text-decoration: none;">Sign up</a>.</p>
+    <p>Don't have an account?
+      <a href="/Sign-up" style="text-decoration: none;">Sign up</a>.</p>
   </div>
   <br /><br /><hr />
 </div>

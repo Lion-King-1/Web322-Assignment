@@ -87,12 +87,28 @@
             onmouseover="this.style.color=' greenyellow'" onmouseout="this.style.color=' white'"
           >On-The-Menu</a>
         </li>
+        {{#if user}}
+        <li class="nav-item justify-content-between">
+          <a class="nav-link" href="/logout" onmouseover="this.style.color=' greenyellow'" onmouseout="this.style.color=' white'">Logout</a>
+        </li>
+        {{#if isCleark}}
+         <li class="nav-item justify-content-between">
+         <pre>                    User:<b style="font-size: larger;"> {{user.firstName}} {{user.lastName}} (Cleark)</b>            </pre>
+         </li>
+        {{else}}
+          <li class="nav-item justify-content-between">
+          <pre>                    User:<b style="font-size: larger;"> {{user.firstName}} {{user.lastName}} (Customer)</b>            </pre>
+          </li>
+        {{/if}}
+        {{else}}
         <li class="nav-item">
           <a class="nav-link" href="/login" onmouseover="this.style.color=' greenyellow'" onmouseout="this.style.color=' white'">Login</a>
         </li>
+      
         <li class="nav-item">
           <a class="nav-link" href="/Sign-up" onmouseover="this.style.color=' greenyellow'" onmouseout="this.style.color=' white'">Sign-up</a>
         </li>
+      {{/if}}
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -106,7 +122,6 @@
             More
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="/Welcome">Welcome</a></li>
             <li><a class="dropdown-item" href="#Cuisines">Cuisines</a></li>
             <li><a class="dropdown-item" href="#Top-meals">Top-meals</a></li>
             <li><hr class="dropdown-divider" /></li>
