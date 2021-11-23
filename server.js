@@ -73,45 +73,6 @@ const usercontrol=require("./controllers/userController")
 app.use('/',generalController);
 app.use('/',usercontrol);
 
-
-// app.get("/",(req,res)=>{
-//   namemodel.find()
-//   .exec()
-//   .then((data)=>{
-
-//     data=data.map(view=>value.toObject());
-  
-//     res.render("general/Register",{
-//       data,
-//       layout:false
-//     });
-//   });
-// });
-
-
-// app.post("/Sign-up",(req,res)=>{
-//   let newName=new namemodel({
-//     firstName:req.body.firstName,
-//     lastName:req.body.lastName,
-//     email:req.body.email,
-//     Password:req.body.Password
-//   });
-
-//   newName.save((err)=>{
-//     if(err)
-//     {
-//       console.log("Couldn't create the new name: "+err);
-//     }
-//     else
-//     {
-//       console.log("Successfully created a new name for "+newName.firstName);
-//     }
-
-//     res.redirect("/");
-//   });
-// });
-
-
 var HTTP_PORT = process.env.PORT || 8080;
 
 // call this function after the http server starts listening for requests
