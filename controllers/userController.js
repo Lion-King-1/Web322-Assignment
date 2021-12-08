@@ -8,7 +8,8 @@ router.get("/Welcome", function (req, res) {
 });
 
 router.get("/cleark", (req, res) => {
-  if (!(req.session.isCleark === undefined || req.session.isCleark === null)) {
+  if(req.session && req.session.user)
+  {
     if (req.session.isCleark) {
       res.render("general/cleark");
     } else {
@@ -20,7 +21,8 @@ router.get("/cleark", (req, res) => {
 });
 
 router.get("/customer", (req, res) => {
-  if (!(req.session.isCleark === undefined || !req.session.isCleark === null)) {
+  if(req.session && req.session.user)
+  {
     if (!req.session.isCleark) {
       res.render("general/customer");
     } else {
@@ -142,7 +144,7 @@ router.get("/login", function (req, res) {
 router.post("/login", function (req, res) {
   console.log(req.body);
 
-  const { email, Password, isCheck } = req.body;
+  const { email, Password} = req.body;
 
   let good = true;
   let dis = {};

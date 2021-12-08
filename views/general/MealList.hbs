@@ -1,0 +1,35 @@
+<div class="Container">
+    <h1 style="color: yellow;">Meal-Kit List</h1>
+</div>
+
+<table class="table" style="color:yellowgreen;font-weight: bold;width:100px;margin-left:auto;margin-right:auto;">
+  <thead style="color: yellowgreen;">
+    <tr>
+      <th scope="col">Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each c_meal}}
+    {{#each items}}
+    <tr>
+  <form method="post" action="/updateMeals" enctype="multipart/form-data">
+      <td scope="col"><input type="text" name="Title" id="Title" value="{{this.Title}}" size="10"></td>
+
+      <td scope="col">Including<br><input type="text" name="Includings" id="Includings" value="{{this.Includings}}" size="10">
+      <br><br>category<br><input type="text" name="category" id="category" value="{{this.category}}" size="10">
+      <br><br>Calory<br><input type="text" name="Calory" id="Calory" value="{{this.Calory}}" size="10"></td>
+      
+      <td scope="col">Description<br><input type="text" name="Description" id="Description" value="{{this.Description}}" size="10">
+      <br><br>Price<br><input type="text" name="Price" id="Price" value="{{this.Price}}" size="10"></td>
+    
+      <td scope="col">CookTime<br><input type="text" name="CookTime" id="CookTime" value="{{this.CookTime}}" size="7">
+      <br><br>Servings<br><input type="text" name="Servings" id="Servings" value="{{this.Servings}}" size="7">
+      <br><br>Top-meals<br><input type="text" name="Top_Meal" id="Top_Meal" value="{{this.Top_Meal}}" size="7"><br><br></td>
+            
+      <td scope="col"><button type="submit" class="btn btn-dark" style="background-color: orangered;border-radius: 30px;">Update</button></td>
+    </tr>
+    </form>
+    {{/each}}
+    {{/each}}
+  </tbody>
+</table>

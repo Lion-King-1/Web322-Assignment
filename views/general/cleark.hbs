@@ -1,6 +1,39 @@
 
 <div style="text-align: center;">
     <br><br><br><br><br>
-<h1> Hello! {{user.firstName}} {{user.lastName}}, This is your "Data Entry Clerk" Dashboard</h1>
-<br><br><br><br><br><br>
+<h3> Hello! {{user.firstName}} {{user.lastName}}, This is your "Data Entry Clerk" Dashboard</h3>
+<br><br><br>
 </div>
+
+<div class="container-fluid" style="text-align: center;">
+    <ul class="nav flex-column">
+     <li class="nav-item">
+        <b> &nbsp;&nbsp;&nbsp;&nbsp;<img src="/26.png" style="border-radius: 50%;"></b>
+        <br><br>
+        <h6 style="color: yellowgreen;">
+        {{user.firstName}} {{user.lastName}}
+        <br>
+        <h7> &nbsp;(Cleark)</h7>
+        </h6>
+     </li>
+        <li class="nav-item">
+         <button style="border-radius: 20px;background:blanchedalmond"><a class="nav-link active" aria-current="page" href="/addNewMeal" onmouseover="this.style.color='brown'" onmouseout="this.style.color='black'" style="color:black;"><b>Add-Meal</b></a></button>
+        </li>
+        <br>
+        <li class="nav-item">
+         <button style="border-radius: 20px;background:blanchedalmond"><a class="nav-link active" aria-current="page" href="/list" onmouseover="this.style.color='brown'" onmouseout="this.style.color='black'" style="color:black;"><b>Update-Meal</b></a></button>        
+        </li>
+        <br>
+        <li class="nav-item">
+         <button style="border-radius: 20px;background:blanchedalmond"><a class="nav-link active" aria-current="page" href="/list" onmouseover="this.style.color='brown'" onmouseout="this.style.color='black'" style="color:black;"><b>Meal-List</b></a></button>  
+        </li>
+    </ul>
+    <br><br>
+    {{#if messages}}
+        <h5>{{messages}}</h5>
+    {{/if}}
+</div>
+<br><br><br>
+ 
+
+   

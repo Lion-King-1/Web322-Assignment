@@ -1,0 +1,147 @@
+<div class="container" style="font-size: x-large;">
+  <form method="post" action="/addNewMeal" enctype="multipart/form-data">
+    <fieldset>
+      <legend>
+        <br /><br />
+        <h1 style="text-align: center;color: yellow;">Add Meal Details</h1>
+        <br /><br /><hr />
+      </legend>
+      <div class="mb-3">
+        <label for="Title">Title*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="Title"
+          id="Title"
+          value="{{value.Title}}"
+        /><br />
+        {{#if valid.Title}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Title}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="Includings">Includings*</label>&nbsp;
+        <input
+          type="text"
+          name="Includings"
+          id="Includings"
+          value="{{value.Includings}}"
+        /><br />
+        {{#if valid.Includings}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Includings}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="Description">Description*</label>
+        <input type="text" name="Description" id="Description" value="{{value.Description}}" /><br
+        />
+        {{#if valid.Description}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Description}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="category">category*</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="category"
+          id="category"
+          value="{{value.category}}"
+        /><br />
+        {{#if valid.category}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.category}}</span><br />
+        {{/if}}
+      </div>
+
+<div class="mb-3">
+        <label for="Price">Price*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="Price"
+          id="Price"
+          value="{{value.Price}}"
+        /><br />
+        {{#if valid.Price}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Price}}</span><br />
+        {{/if}}
+
+      </div>
+      <div class="mb-3">
+        <label for="CookTime">CookTime*</label>&nbsp;&nbsp;
+        <input
+          type="text"
+          name="CookTime"
+          id="CookTime"
+          value="{{value.CookTime}}"
+        /><br />
+        {{#if valid.CookTime}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.CookTime}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="Servings">Servings*</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="Servings"
+          id="Servings"
+          value="{{value.Servings}}"
+        /><br />
+        {{#if valid.Servings}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Servings}}</span><br />
+        {{/if}}
+      </div>
+
+      <div class="mb-3">
+        <label for="Calory">Calory*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="Calory"
+          id="Calory"
+          value="{{value.Calory}}"
+        /><br />
+        {{#if valid.Calory}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Calory}}</span><br />
+        {{/if}}
+      </div>
+
+    <div class="mb-3" style="margin-left: 17%;">
+        <label for="Image_url">Picture*</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="file"
+          name="Image_url"
+          id="Image_url"
+          value="{{value.Image_url}}"
+        /><br />
+        {{#if valid.Image_url}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Image_url}}</span><br />
+        {{/if}}
+      </div>
+
+<div class="mb-3">
+        <label for="Top_Meal">Top_Meal*</label>&nbsp;&nbsp;
+        <input
+          type="text"
+          name="Top_Meal"
+          id="Top_Meal"
+          value="{{value.Top_Meal}}"
+        /><br />
+        {{#if valid.Top_Meal}}
+          <span style="color:rgb(226, 42, 42);font-size: large;font-weight: 600;">{{valid.Top_Meal}}</span><br />
+        {{/if}}
+    </div>
+
+      <div>
+        <button
+          type="submit"
+          class="btn btn-dark"
+          style="background-color: orangered;border-radius: 30px;"
+        >Add
+        </button>
+      </div>
+    </fieldset>
+  </form>
+  <br />
+  <br /><br /><hr />
+</div>

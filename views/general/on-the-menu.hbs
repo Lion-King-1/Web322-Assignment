@@ -2,12 +2,12 @@
 {{>hero}}
 {{#each m_meal}}
 <br><br><br>
-    <h1 style="font-size: xx-large;text-align: center;color: yellow;">{{this.design}}</h1>
+    <h1 style="font-size: xx-large;text-align: center;color: yellow;">{{this.category}}</h1>
     <h5 style="text-align: center;color: yellow;">Eat More &#38; Enjoy More</h5>
     <h4 style="color: green;text-align: center;">Hover/Click On Images For More Details</h4><br><br>
 <div class="container">
 <div class="row row-cols-md-2 row-cols-sm-1">
-  {{#each array}}
+  {{#each items}}
 <div class="col">
     <div class="card" style="width: 18rem;display: flex;margin:auto;background-color: transparent">
   <img src={{this.Image_url}} class="card-img-top" alt="..." style="border-radius: 50%;">

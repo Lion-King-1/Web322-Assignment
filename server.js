@@ -14,6 +14,7 @@ const bodyParser = require("body-parser");
 var express = require("express");
 const exphbs = require('express-handlebars');
 const session=require("express-session");
+const fileUpload=require("express-fileupload");
 const mongoose=require("mongoose");
 // const { url } = require("inspector");
 // const Fakedata=require('./models/data')
@@ -44,11 +45,17 @@ app.use((req,res,next)=>{
   res.locals.isCleark=req.session.isCleark;
   next();
 });
+
+// setup fileupload
+
+app.use(fileUpload());
+
 // setup folders that contain static resources
-app.use(express.static("css"));
-app.use(express.static("icons_images"));
-app.use(express.static("images"));
-app.use(express.static("Videos"));
+app.use(express.static("public/css"));
+app.use(express.static("publicicons_images"));
+app.use(express.static("public/images"));
+app.use(express.static("public/Videos"));
+app.use(express.static("public/MealDatabsePic"));
 
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -68,10 +75,14 @@ mongoose.connect(process.env.Pass_Mongo,{
 
 // setup a 'route' to listen on the default url path (http://localhost)
 const generalController=require('./controllers/general');
-const usercontrol=require("./controllers/userController")
+const usercontrol=require("./controllers/userController");
+const mealAdder=require("./controllers/load-data");
+const mealManipulate=require("./controllers/mealController");
 
 app.use('/',generalController);
 app.use('/',usercontrol);
+app.use('/',mealAdder);
+app.use('/',mealManipulate);
 
 var HTTP_PORT = process.env.PORT || 8080;
 
