@@ -403,7 +403,7 @@ router.get("/customer", (req, res) => {
   }
 });
 
-router.get("/shop",(req,res)=>{
+router.get("/LetsShop",(req,res)=>{
   if(req.session.user)
   {
       res.render("general/Shoppingcart",prepareViewModel(req,message=""));
