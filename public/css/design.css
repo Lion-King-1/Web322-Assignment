@@ -251,3 +251,9 @@ body {
 {
   display:none;
 }
+
+.class
+{
+  margin-left: auto;
+  margin-right: auto;
+}

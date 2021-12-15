@@ -1,0 +1,39 @@
+<div class="container" style="text-align: center;">
+    {{#if message}}
+    <h3 style="color: red;">{{message}}</h3>
+    {{/if}}
+
+
+    <h2 style="color: yellowgreen;">Shopping Cart</h2><br><br>
+    <dl>
+        <dt>Cart Empty?</dt>
+        {{#if hasMeals}}
+        <dd>Status: No</dd>
+        {{else}}
+        <dd>Status: Yes</dd>
+        {{/if}}
+
+        <dt>Cart Amount</dt>
+        <dd>Total: {{cartTotal}}</dd>
+    </dl>
+
+      {{#if hasMeals}}
+        <table border="1" class="table" style="font-weight: bold;width:300px;margin-left:auto;margin-right:auto;">
+            <tr style="color: yellowgreen;">
+                <th>Meal Name</th>
+                <th>Quantity</th>
+            </tr>
+
+            {{#each obj_Meals}}
+                <tr style="color: yellow;">
+                    <td>{{Title}}</td>
+                    <td>{{qty}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    {{/if}}
+    <br><br><br>
+   <a href="/checkout"><button class="btn btn-dark" style="background-color: orangered;border-radius: 30px;">Place My Order</button></a><br><br><br>
+   <a href="/on-the-menu"><button class="btn btn-dark" style="background-color: orangered;border-radius: 30px;">Order More</button></a>
+</div>
+<br><br><br><br>

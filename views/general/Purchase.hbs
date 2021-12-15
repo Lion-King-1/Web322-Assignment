@@ -1,0 +1,29 @@
+{{#each obj}}
+
+{{#if this.Title}}
+<br><br><br>
+<div class="container" style="text-align: center;">
+<img src="{{this.Image_url}}" class="img-fluid" alt="..." style="border-radius: 10px;width:400px"><br><br>
+</div>
+<div class="container" style="color: yellowgreen;">
+  <div class="row">
+    <div class="col">
+      <h2 style="font-weight:800">Cooking Time</h2><br><h5 style="color:black;background-color:khaki;border-radius:10px;padding:15px;font-weight:800;opacity:0.7;">{{this.CookTime}}</h5>
+    </div>
+    <div class="col">
+      <h2 style="font-weight:800">Servings</h2><br><h5 style="color:black;background-color:khaki;border-radius:10px;padding:15px;font-weight:800;opacity:0.7;">{{this.Servings}}</h5>
+    </div>
+    <div class="col">
+      <h2 style="font-weight:800">Calories</h2><br><h5 style="color:black;background-color:khaki;border-radius:10px;padding:15px;font-weight:800;opacity:0.7;">{{this.Calory}}</h5>
+    </div>
+  </div>
+</div>
+<div class="container"><br>
+    <h1 style="font-weight:800;color:blanchedalmond">{{this.Title}}</h1>
+    <br><h2>{{this.Includings}}</h2><br><h3>{{this.Description}}</h3>
+    <br><br>
+    <button class="btn btn-dark" style="background-color: orangered;border-radius: 30px;" onclick="window.location.href='/Buy-Meal/{{this.Title}}'">Buy for {{this.Price}}</button>
+</div>
+<br><br><br><br><br>
+{{/if}}
+{{/each}}

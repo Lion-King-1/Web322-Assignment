@@ -20,19 +20,6 @@ router.get("/cleark", (req, res) => {
   }
 });
 
-router.get("/customer", (req, res) => {
-  if(req.session && req.session.user)
-  {
-    if (!req.session.isCleark) {
-      res.render("general/customer");
-    } else {
-      res.redirect("cleark");
-    }
-  } else {
-    res.redirect("/");
-  }
-});
-
 router.get("/Sign-up", function (req, res) {
   res.render("general/Register");
 });
@@ -175,7 +162,7 @@ router.post("/login", function (req, res) {
 
                 req.session.user = user;
                 req.session.isCleark = req.body.Operator === "Cleark";
-
+                
                 if (req.session.isCleark) {
                   console.log("User is a Cleark");
                   res.redirect("cleark");
